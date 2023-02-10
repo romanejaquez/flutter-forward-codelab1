@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:roman_web_portfolio/pages/splash_page.dart';
 import 'package:roman_web_portfolio/routes/app_routes.dart';
 import 'package:roman_web_portfolio/services/left_navigation_service.dart';
+import 'package:roman_web_portfolio/services/twitter_page_service.dart';
 import 'package:roman_web_portfolio/services/welcome_page_service.dart';
 
 void main() {
   runApp(
     MultiProvider(
       providers: [
+        Provider(
+          create: (_) => TwitterPageService(),
+        ),
         ChangeNotifierProvider(
           create: (_) => LeftNavigationService(),
         ),
