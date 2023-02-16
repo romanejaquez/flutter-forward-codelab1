@@ -21,54 +21,54 @@ class AppRoutes {
       ),
       ShellRoute(
         navigatorKey: Utils.tabNav,
-        builder: ((context, state, child) {
+        builder: (context, state, child) {
           return PortfolioMainPage(child: child);
-        }),
+        },
         routes: [
           GoRoute(
             parentNavigatorKey: Utils.tabNav,
             path: WelcomePage.route,
-            pageBuilder: ((context, state) {
+            pageBuilder: (context, state) {
               return const NoTransitionPage(
                 child: WelcomePage()
               );
-            })
+            }
           ),
           GoRoute(
             parentNavigatorKey: Utils.tabNav,
             path: TwitterPage.route,
-            pageBuilder: ((context, state) {
+            pageBuilder: (context, state) {
               return const NoTransitionPage(
                 child: TwitterPage()
               );
-            })
+            }
           ),
           GoRoute(
             parentNavigatorKey: Utils.tabNav,
             path: LinkedInPage.route,
-            pageBuilder: ((context, state) {
+            pageBuilder: (context, state) {
               return const NoTransitionPage(
                 child: LinkedInPage()
               );
-            })
+            }
           ),
           GoRoute(
             parentNavigatorKey: Utils.tabNav,
             path: WebPage.route,
-            pageBuilder: ((context, state) {
+            pageBuilder: (context, state) {
               return const NoTransitionPage(
                 child: WebPage()
               );
-            })
+            }
           ),
           GoRoute(
             parentNavigatorKey: Utils.tabNav,
             path: GithubPage.route,
-            pageBuilder: ((context, state) {
+            pageBuilder: (context, state) {
               return const NoTransitionPage(
                 child: GithubPage()
               );
-            })
+            }
           )
         ]
       )
